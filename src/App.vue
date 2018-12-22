@@ -78,45 +78,7 @@ export default class App extends Vue {}
 </script>
 
 <style lang="scss">
-
-$font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-$font-family-alt: 'Helvetica Neue', sans-serif;
-$drawer-width: 220px;
-$header-height: 60px;
-$background-color: #fafafb;
-$drawer-background-color: #27375D;
-$header-background-color: white;
-$border-color: #eaecef;
-$border-radius: 2px;
-$padding: 20px;
-
-$margin-y: 25px;
-
-$text-light: #D6E3FF;
-$text-color: #1D2945;
-$text-secondary: #818796;
-
-@mixin fill-viewport {
-  min-width: 100vw;
-  min-height: 100vh;
-}
-
-@mixin text-thin {
-  font-weight: 300;
-}
-
-@mixin text-extra-thin {
-  font-weight: 200;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+@import 'variables';
 
 .mt {
   margin-top: $margin-y;
@@ -133,19 +95,6 @@ ul {
 }
 
 
-html {
-  @include fill-viewport();
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  font-family: $font-family;
-  @include fill-viewport;
-  background-color: $background-color;
-  color: $text-color;
-}
-
 #app {
   height: 100vh;
 }
@@ -158,111 +107,6 @@ body {
   @include text-extra-thin;
 }
 
-.drawer-nav-layout {
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-
-  .drawer {
-    width: $drawer-width;
-    background-color: $drawer-background-color;
-    position: fixed;
-    height: 100vh;
-    @media screen and (max-width: 500px) {
-      display: none;
-    }
-    z-index: 30;
-  }
-
-  .main {
-    flex-grow: 1;
-    position: relative;
-    margin-left: $drawer-width;
-    @media screen and (max-width: 500px) {
-      margin-left: 0;
-    }
-
-    .main-header {
-      position: fixed;
-      width: 100%;
-      top: 0px;
-    }
-
-    .page-content {
-      margin-top: $header-height;
-    }
-  }
-}
-
-.main-header {
-  background-color: rgba($header-background-color, 0.95);
-  height: $header-height;
-  box-shadow: 0px 0px 3px #ced0d2;
-  z-index: 20;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: {
-    left: $padding;
-    right: $padding;
-  }
-}
-
-.page-content {
-  min-height: calc(100vh - 50px);
-  z-index: 9;
-  overflow-y: auto;
-}
-
-.drawer-header {
-  height: $header-height;
-  margin: 0;
-  padding: {
-    left: $padding;
-    right: $padding;
-  }
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: #2A4071;
-  color: $text-light;
-}
-
-.drawer-content {
-  @include text-thin;
-  padding-top: $padding;
-  .nav-group-header {
-    text-transform: uppercase;
-    font-size: 0.75em;
-    color: #91a6d2;
-    padding: 10px $padding;
-    font-weight: 500;
-  }
-  .nav-item {
-    color: #91a6d2;
-    padding: 10px $padding;
-    font-size: 0.85em;
-    
-    &.active {
-      color: $text-light;
-      background-color: #1b3158;
-    }
-
-    &:hover {
-      background-color: #1b3158;
-    }
-  }
-
-  .nav-group {
-    .nav-item {
-      padding-left: $padding * 2;
-    }
-  }
-
-  .separator {
-    border-bottom: 1px solid #172b4e;
-  }
-}
 
 .container {
   margin-left: auto;

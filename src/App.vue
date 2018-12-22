@@ -11,7 +11,7 @@
               Current App
             </div>
             <s-nav-item>Compose</s-nav-item>
-            <s-nav-item>Inbox</s-nav-item>
+            <s-nav-item active>Inbox</s-nav-item>
             <s-nav-item>Reports</s-nav-item>
           </s-nav-group>
           <s-nav-separator />
@@ -22,7 +22,6 @@
           <s-nav-item>Manage users</s-nav-item>
         </div>
       </s-drawer>
-      <div class="some">
       <s-app-bar-layout>
         <s-app-bar slot="bar">
           New product
@@ -41,7 +40,6 @@
                 </div>
               </div>
               <div class="panel-body">
-                <!-- <div>Label</div> -->
                 <div class="field-group">
                   <input type="text" class="text-field" placeholder="Enter name" />
                 </div>
@@ -65,7 +63,6 @@
           </div>
         </div>
       </s-app-bar-layout>
-      </div>
     </s-drawer-layout>
   </div>
 </template>

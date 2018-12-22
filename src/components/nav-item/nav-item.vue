@@ -12,7 +12,7 @@ export default class extends Vue {
   get classObject () {
     return {
       's-active': this.active
-    }
+    };
   }
 }
 </script>

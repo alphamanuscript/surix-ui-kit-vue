@@ -1,6 +1,6 @@
 <template>
   <div class="s-app-bar-layout">
-    <slot name="bar"></slot>
+    <slot name="app-bar"></slot>
     <div class="s-app-bar-layout-content">
       <slot></slot>
     </div>

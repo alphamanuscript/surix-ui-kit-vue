@@ -23,10 +23,10 @@
         </div>
       </s-drawer>
       <s-app-bar-layout>
-        <s-app-bar slot="bar">
+        <s-app-bar slot="app-bar">
           New product
         </s-app-bar>
-        <div class="page-content">
+        <div>
           <div class="banner">  
           </div>
           <div class="container mt-lg">

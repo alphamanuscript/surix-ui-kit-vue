@@ -1,36 +1,34 @@
 <template>
   <div id="app">
-    <div class="drawer-nav-layout">
-      <div class="drawer">
-        <div class="drawer-header">
+    <s-drawer-layout>
+      <s-drawer slot="drawer">
+        <div slot="header">
           Happy Feet
         </div>
-        <div class="drawer-content">
-          <div class="nav-group">
-            <div class="nav-group-header">
+        <div>
+          <s-nav-group>
+            <div slot="header">
               Current App
             </div>
-            <div class="nav-group-content">
-              <div class="nav-item">Compose</div>
-              <div class="nav-item active">Inbox</div>
-              <div class="nav-item">Reports</div>
-            </div>
-          </div>
-          <div class="separator"></div>
-          <div class="nav-item">Apps</div>
-          <div class="nav-item">Marketplace</div>
-          <div class="separator"></div>
-          <div class="nav-item">Settings</div>
-          <div class="nav-item">Manage users</div>
+            <s-nav-item>Compose</s-nav-item>
+            <s-nav-item>Inbox</s-nav-item>
+            <s-nav-item>Reports</s-nav-item>
+          </s-nav-group>
+          <s-nav-separator />
+          <s-nav-item>Apps</s-nav-item>
+          <s-nav-item>Marketplace</s-nav-item>
+          <s-nav-separator />
+          <s-nav-item>Settings</s-nav-item>
+          <s-nav-item>Manage users</s-nav-item>
         </div>
-      </div>
-      <div class="main">
-        <div class="main-header text-extra-thin">
+      </s-drawer>
+      <div class="some">
+      <s-app-bar-layout>
+        <s-app-bar slot="bar">
           New product
-        </div>
+        </s-app-bar>
         <div class="page-content">
-          <div class="banner">
-            
+          <div class="banner">  
           </div>
           <div class="container mt-lg">
             <div class="panel mb-lg">
@@ -66,16 +64,18 @@
             </div>
           </div>
         </div>
+      </s-app-bar-layout>
       </div>
-    </div>
+    </s-drawer-layout>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import * as components from './components';
 
 @Component({
-  components: {},
+  components,
 })
 export default class App extends Vue {}
 </script>

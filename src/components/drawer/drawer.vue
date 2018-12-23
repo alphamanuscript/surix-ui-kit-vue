@@ -12,5 +12,5 @@
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component({ name: 's-drawer' })
-export default class extends Vue {};
+export default class extends Vue {}
 </script>

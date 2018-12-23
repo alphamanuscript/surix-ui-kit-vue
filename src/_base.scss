@@ -19,3 +19,25 @@ body {
 html {
   @include fill-viewport();
 }
+
+.mt {
+  margin-top: $margin-y;
+  &-lg {
+    margin-top: $margin-y * 2;
+  }
+}
+
+.mb {
+  margin-bottom: $margin-y;
+  &-lg {
+    margin-bottom: $margin-y * 2;
+  }
+}
+
+.text-thin {
+  @include text-thin();
+}
+
+.text-extra-thin {
+  @include text-extra-thin;
+}

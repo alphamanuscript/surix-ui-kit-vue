@@ -1,9 +1,11 @@
 <template>
-  <div class="s-nav-separator"></div>
+  <div class="s-container">
+    <slot></slot>
+  </div>
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
-@Component({ name: 's-nav-separator' })
+@Component({ name: 's-container' })
 export default class extends Vue {}
 </script>

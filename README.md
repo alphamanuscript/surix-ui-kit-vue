@@ -1,4 +1,6 @@
-# ui-kit-vue
+# Surix UI Kit
+
+UI Components for Surix Apps
 
 ## Project setup
 ```
